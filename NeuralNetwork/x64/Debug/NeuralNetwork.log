@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(68,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  NeuralNetwork.vcxproj -> C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\Debug\NeuralNetwork.exe
