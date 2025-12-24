@@ -1,6 +1,25 @@
-﻿     Creating library C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\Release\NeuralNetwork.lib and object C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\Release\NeuralNetwork.exp
+﻿  main.cpp
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(81,51): warning C4551: function call missing argument list
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(244,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(319,55): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  pygateway.cpp
+  EMath.cpp
+  FileManager.cpp
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\FileManager.cpp(17,28): warning C4551: function call missing argument list
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\FileManager.cpp(155,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\FileManager.cpp(200,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  NeuralNetwork.cpp
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\NeuralNetwork.cpp(186,72): warning C4551: function call missing argument list
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\NeuralNetwork.cpp(239,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\EMath.h(92,33): warning C4551: function call missing argument list
+  (compiling source file 'scr/NeuralNetwork.cpp')
+      C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\EMath.h(92,33):
+      the template instantiation context (the oldest one first) is
+          C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\NeuralNetwork.cpp(250,19):
+          see reference to function template instantiation 'void operator +=<float>(std::vector<float,std::allocator<float>> &,const std::vector<float,std::allocator<float>> &)' being compiled
+  
   Generating code
-  Previous IPDB not found, fall back to full compilation.
-  All 2443 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Compiler switch has changed, fall back to full compilation.
+  All 553 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
-  NeuralNetwork.vcxproj -> C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\Release\NeuralNetwork.pyd
+  NeuralNetwork.vcxproj -> C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\Release\NeuralNetwork.exe
