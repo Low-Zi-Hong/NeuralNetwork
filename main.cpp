@@ -15,6 +15,10 @@ using namespace std;
 
 #define nnet_structure {2,30,30,30,4} //{input, [hidden layer], output}
 
+// ======= XOR Version of Model =======
+#define XOR_Version
+//comment if dont want
+
 
 int approach = 10;
 int batchSize = 10;
@@ -55,7 +59,10 @@ int main()
 
     //generate dataset XOR one later do the MNIST dataset
     std::vector<std::vector<float>> dataset;
+#ifdef XOR_Version
     XOR::init(dataset);
+#endif // 
+
 
     //split to mini batch
     int numBatches = dataset.size() / batchSize;
@@ -75,7 +82,11 @@ int main()
     std::vector<std::vector<std::vector<float>>> b_dataans(b_dataset.size());
     // 1. Resize the top-level container to match your batch count
     b_dataans.resize(numBatches);
+
+#ifdef XOR_Version
     XOR::generateAns;
+#endif // XOR_Version
+
 
 
 

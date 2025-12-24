@@ -1,57 +1,22 @@
-# NeuralNetwork
-🧠 NeuralNetwork-CPP
-A High-Performance, From-Scratch C++ Neural Network Engine
+# LZH Neural Engine (C++) 🧠
 
-Built with a focus on Systems Architecture, memory efficiency, and hardware-level optimization. This project implements a multi-layer perceptron (MLP) without the use of external machine learning libraries, targeting the XOR problem and MNIST handwritten digit recognition.
+A high-performance Neural Network engine built from scratch in C++, designed for modularity and bit-perfect persistence. This project is part of my 2026 graduation milestones at Kolej Matrikulasi Perak.
 
-🚀 Key Features
-Hardware-Up Design: Built using standard C++ vectors with a focus on cache locality and spatial data alignment.
+## 🚀 Current Milestone: XOR Mastery
+The engine has successfully converged on the XOR non-linear manifold with **100% Accuracy** and a stabilized loss of **0.0001**.
 
-Mini-Batch Gradient Descent: Implements efficient data batching to stabilize training and optimize CPU throughput.
+### Key Features
+* **Dynamic Topology**: Flexible `reinit` system allowing the model to "shape-shift" architectures (e.g., from {2,4,1} for XOR to {784,128,10} for MNIST).
+* **Binary Persistence (FMANAGER)**: Custom `.nnet` serialization protocol utilizing bit-perfect binary I/O for model saving/loading.
+* **Stochastic Mini-Batching**: Efficient training loop using accumulated gradients and real-time telemetry.
 
-OpenMP Parallelization: Utilizes multi-threading for neuron-level calculations in large layers.
+## 🛠️ Installation & Usage
+1. Clone the repository.
+2. Open the Visual Studio Solution (`.sln`).
+3. Build and Run.
+4. Use the console UI to create a new model or load the pre-trained `model_v1.nnet`.
 
-FMA Optimized: Mathematical kernels designed to trigger Fused Multiply-Add (FMA) and AVX2 instructions during the forward pass.
-
-Custom File Manager: Proprietary .nnet file format for saving and loading trained weights and biases.
-
-🛠️ The Architecture
-The engine is structured to separate the mathematical kernels from the network management:
-
-NNET Core: Handles the Feedforward and Backpropagation logic.
-
-EMath: A dedicated math namespace for Sigmoid activations, Matrix-Vector multiplication (IKJ ordered), and MSE calculation.
-
-FileManager: Handles model serialization and binary data I/O.
-
-📊 Current Status: XOR Validation
-The network is currently undergoing validation on the XOR logic gate problem.
-
-Topology: 2 Input Neurons → 3 Hidden Neurons → 1 Output Neuron.
-
-Activation: Sigmoid.
-
-Optimization: Stochastic Gradient Descent (SGD) with Mini-Batching.
-
-⚙️ Build & Run
-Ensure you have a C++17 compatible compiler and OpenMP installed.
-
-Bash
-
-# Clone the repository
-git clone https://github.com/Low-Zi-Hong/NeuralNetwork.git
-
-# Navigate to the directory
-cd NeuralNetwork
-
-# Compile (example using GCC with OpenMP and AVX2)
-g++ -O3 -fopenmp -mavx2 main.cpp scr/*.cpp -o NeuralNetwork.exe
-
-# Run the engine
-./NeuralNetwork.exe
-🎯 Project Goals
-Phase 1: Solve XOR logic gate (Current).
-
-Phase 2: Implement MNIST data loader and achieve >90% accuracy on handwritten digits.
-
-Phase 3: Refactor to flattened 1D contiguous memory buffers for maximum cache performance.
+## 📈 Roadmap
+- [x] XOR Logical Convergence (100% Acc)
+- [ ] MNIST Data Bridge Implementation
+- [ ] MNIST Model Training (Targeting 95%+ Accuracy)
