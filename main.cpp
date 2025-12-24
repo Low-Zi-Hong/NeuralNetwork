@@ -5,26 +5,6 @@
 #include <vector>
 using namespace std;
 
-//debugging
-#include <chrono>
-#define PROFILE_SCOPE(name, code_block) \
-    { \
-        auto start = std::chrono::high_resolution_clock::now(); \
-        code_block \
-        auto end = std::chrono::high_resolution_clock::now(); \
-        std::chrono::duration<float> duration = end - start; \
-        std::cout << "[PROFILE] " << name << " took: " << duration.count() << " seconds." << std::endl; \
-    }
-#define PROFILE_MS(name, code_block) \
-    { \
-        auto start = std::chrono::high_resolution_clock::now(); \
-        code_block \
-        auto end = std::chrono::high_resolution_clock::now(); \
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start); \
-        std::cout << "[PROFILE] " << name << " took: " << duration.count() << " us" \
-                  << " (" << (float)duration.count() / 1000.0f << " ms)" << std::endl; \
-    }
-
 #include "scr/NeuralNetwork.h"
 #include "scr/FileManager.h"
 #include"scr/UI.h"
@@ -281,8 +261,9 @@ int main()
                 NeuralNetwork.input(b_dataset[batch][iteration]);
 
                 //running the model
-                NNET::Feed_Propagation(NeuralNetwork);
-
+                //PROFILE_MS("Feed",
+                    NNET::Feed_Propagation(NeuralNetwork);
+                //);
 
                 //calculate Error
                 std::vector<float> result = b_dataans[batch][iteration];
@@ -301,7 +282,9 @@ int main()
 
                 if (NeuralNetwork.MNISTResult() == target_digit) correct_hits++;
 
-                NNET::Back_Propagation(NeuralNetwork, result);
+                //PROFILE_MS("BP",
+                    NNET::Back_Propagation(NeuralNetwork, result);
+                //);
 
                 NNET::Clear_Layer(NeuralNetwork);
 
@@ -310,7 +293,7 @@ int main()
                 //accumulate gradient done
             }
 
-            float learning_rate = 1.0f;
+            float learning_rate = 0.01f;
             NNET::Update_Model(NeuralNetwork, learning_rate, batchSize);
 
             // 5. Live Dashboard Call

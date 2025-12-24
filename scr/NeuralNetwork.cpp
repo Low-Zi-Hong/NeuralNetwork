@@ -6,6 +6,7 @@
 
 #include "NeuralNetwork.h"
 #include "EMath.h"
+#include "Run.h"
 
 using namespace std;
 
@@ -247,8 +248,26 @@ float NNET::Back_Propagation(nnet& _nnet, std::vector<float>& result)
 				_nnet.Weight_g[l-1][o][i] +=  _nnet.Layer[l - 1][o] * delta_l[i];
 			}
 		}
-		_nnet.Bias_g[l] += delta_l;
-
+		//PROFILE_NS("adding",
+		//	_nnet.Bias_g[l] += delta_l;
+		//);
+		/*
+		* old:
+		[PROFILE] adding took: 300 ns
+		[PROFILE] adding took: 79200 ns
+		[PROFILE] adding took: 28900 ns
+		* new:
+		[PROFILE] adding took: 500 ns
+		[PROFILE] adding took: 2800 ns
+		[PROFILE] adding took: 4600 ns
+		[PROFILE] adding took: 8900 ns
+		* 
+		*/
+			for (int i = 0; i < _nnet.Bias_g[l].size();i++)
+			{
+				_nnet.Bias_g[l][i] += delta_l[i];
+			}
+		
 		//update delta_l
 		if (l > 1) {
 			vector<float>& new_delta_l = _nnet.Delta[l - 1];

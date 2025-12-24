@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\NeuralNetwork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\NeuralNetwork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\Run.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\Run.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\NeuralNetwork.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\Python\\pygateway.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -24,18 +36,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\Run.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\Run.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\XOR.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -69,20 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "XOR.h",
-              "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\XOR.h",
-              "RelativeDocumentMoniker": "scr\\XOR.h",
-              "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\XOR.h",
-              "RelativeToolTip": "scr\\XOR.h",
-              "ViewState": "AgIAAAIAAAAAAAAAAAA3wA8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-24T09:00:10.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "UI.h",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\UI.h",
               "RelativeDocumentMoniker": "scr\\UI.h",
@@ -95,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "pygateway.cpp",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\Python\\pygateway.cpp",
               "RelativeDocumentMoniker": "Python\\pygateway.cpp",
@@ -108,13 +95,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "FileManager.cpp",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.cpp",
               "RelativeDocumentMoniker": "scr\\FileManager.cpp",
               "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.cpp",
               "RelativeToolTip": "scr\\FileManager.cpp",
-              "ViewState": "AgIAALcAAAAAAAAAAAAowM0AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAALcAAAAAAAAAAAAowM0AAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-23T12:35:31.301Z",
               "EditorCaption": ""
@@ -127,7 +114,7 @@
               "RelativeDocumentMoniker": "scr\\FileManager.h",
               "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.h",
               "RelativeToolTip": "scr\\FileManager.h",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-23T12:22:43.635Z",
               "EditorCaption": ""
@@ -160,20 +147,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAsBAAAAAAAAAAAwwBcBAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAwBAAAAAAAAAAAswBwBAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-23T12:00:37.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NeuralNetwork.h",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.h",
               "RelativeDocumentMoniker": "scr\\NeuralNetwork.h",
@@ -186,33 +173,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "NeuralNetwork.cpp",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.cpp",
               "RelativeDocumentMoniker": "scr\\NeuralNetwork.cpp",
               "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.cpp",
               "RelativeToolTip": "scr\\NeuralNetwork.cpp",
-              "ViewState": "AgIAANgAAAAAAAAAAAAowOcAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAvwKIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-23T12:02:09.892Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Run.h",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\Run.h",
               "RelativeDocumentMoniker": "scr\\Run.h",
               "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\Run.h",
               "RelativeToolTip": "scr\\Run.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswBsAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-24T10:10:13.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
+              "Title": "XOR.h",
+              "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\XOR.h",
+              "RelativeDocumentMoniker": "scr\\XOR.h",
+              "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\XOR.h",
+              "RelativeToolTip": "scr\\XOR.h",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA3wA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-24T09:00:10.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "vector",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
