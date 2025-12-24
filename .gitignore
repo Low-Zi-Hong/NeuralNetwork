@@ -1,0 +1,25 @@
+# --- Visual Studio Junk ---
+.vs/
+out/
+build/
+bin/
+obj/
+*.user
+*.sln.docstates
+
+# --- Executables & Binary Outputs ---
+*.exe
+*.o
+*.obj
+*.pdb
+*.ilk
+
+# --- Neural Network Data (Large Files) ---
+# Since you plan to train for 2-3 hours, these files can get big!
+*.nnet
+*.bin
+mnist_data/
+
+# --- Personal & OS Junk ---
+.DS_Store
+Thumbs.db

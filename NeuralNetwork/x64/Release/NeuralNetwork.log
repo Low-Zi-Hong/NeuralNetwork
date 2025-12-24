@@ -1,0 +1,6 @@
+﻿     Creating library C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\Release\NeuralNetwork.lib and object C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\Release\NeuralNetwork.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 2443 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  NeuralNetwork.vcxproj -> C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\Release\NeuralNetwork.pyd

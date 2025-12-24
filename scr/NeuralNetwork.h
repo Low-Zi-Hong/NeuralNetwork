@@ -21,6 +21,11 @@ namespace NNET
 
 		vector<float> Error;
 
+		//this for gradient accumulation
+		vector<vector<float>> Delta;
+		vector<vector<vector<float>>> Weight_g;
+		vector<vector<float>> Bias_g;
+
 		/*
 		This Initialise the neural network.
 		This create and initialise the weight bias and layer of the network from user input and save the model
@@ -29,10 +34,17 @@ namespace NNET
 		*/
 		nnet(vector<int> _structure);
 
+		void reinit(vector<int> _structure);
+
 		int input(vector<float>& inp)
 		{
 			if (inp.size() == Layer[0].size()) Layer[0] = inp;
 			return 0;
+		}
+
+		std::vector<float>& Last_Layer()
+		{
+			return Layer[Layer.size() - 1];
 		}
 	};
 
@@ -48,6 +60,13 @@ namespace NNET
 
 	float Calculate_Error(nnet& _nnet, std::vector<float>& result);
 
+	float Init_Gradient_Accumulation(nnet& _nnet);
+
+	float Back_Propagation(nnet& _nnet, std::vector<float>& result);
+
+	float Update_Model(NNET::nnet& _nnet, float& learning_rate, int& batch_size);
+
+	void Clear_Layer(NNET::nnet& _nnet);
 
 
 }
