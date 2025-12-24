@@ -1,4 +1,5 @@
 ﻿  main.cpp
-C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(64,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(146,55): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(81,51): warning C4551: function call missing argument list
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(244,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(319,55): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   NeuralNetwork.vcxproj -> C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\Debug\NeuralNetwork.exe

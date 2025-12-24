@@ -3,6 +3,7 @@
 
 #pragma once
 #include <iostream>
+#include<fstream>
 #include <vector>
 using namespace std;
 
@@ -23,4 +24,15 @@ namespace FMANAGER
 	int SaveFile(const NNET::nnet& _nnet, string& file_path);
 }
 
+namespace MNIST
+{
+#ifndef RINT
+#define RINT
+	int ReverseInt(int i);
+#endif // 
+
+	void LoadImages(std::string filename, std::vector<std::vector<float>>& dataset);
+
+	void LoadLabels(std::string filename, std::vector<std::vector<float>>& labels);
+}
 #endif

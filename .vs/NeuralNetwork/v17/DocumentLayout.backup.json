@@ -3,43 +3,51 @@
   "WorkspaceRootPath": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\NeuralNetwork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\NeuralNetwork.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\EMath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\EMath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\Python\\pygateway.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:Python\\pygateway.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\EMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\EMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\Run.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\Run.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\XOR.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\XOR.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\EMath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\EMath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\EMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E43582-C00C-40BF-9A2E-F4648D8995C4}|NeuralNetwork.vcxproj|solutionrelative:scr\\EMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,7 +57,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -61,20 +69,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
+              "Title": "XOR.h",
+              "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\XOR.h",
+              "RelativeDocumentMoniker": "scr\\XOR.h",
+              "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\XOR.h",
+              "RelativeToolTip": "scr\\XOR.h",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA3wA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-24T09:00:10.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "UI.h",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\UI.h",
               "RelativeDocumentMoniker": "scr\\UI.h",
               "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\UI.h",
               "RelativeToolTip": "scr\\UI.h",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAwwCUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-24T08:44:05.04Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "pygateway.cpp",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\Python\\pygateway.cpp",
               "RelativeDocumentMoniker": "Python\\pygateway.cpp",
@@ -87,46 +108,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "vector",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
-              "ViewState": "AgIAAFIHAAAAAAAAAAAowF8HAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-23T15:37:08.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "FileManager.cpp",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.cpp",
               "RelativeDocumentMoniker": "scr\\FileManager.cpp",
               "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.cpp",
               "RelativeToolTip": "scr\\FileManager.cpp",
-              "ViewState": "AgIAACgAAAAAAAAAAAAowD8AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAALcAAAAAAAAAAAAowM0AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-23T12:35:31.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FileManager.h",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.h",
               "RelativeDocumentMoniker": "scr\\FileManager.h",
               "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\FileManager.h",
               "RelativeToolTip": "scr\\FileManager.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAgwBcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-23T12:22:43.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "EMath.cpp",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\EMath.cpp",
               "RelativeDocumentMoniker": "scr\\EMath.cpp",
@@ -139,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "EMath.h",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\EMath.h",
               "RelativeDocumentMoniker": "scr\\EMath.h",
@@ -152,46 +160,86 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\main.cpp*",
-              "RelativeToolTip": "main.cpp*",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAIsAAAAlAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAwwBsBAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-23T12:00:37.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "NeuralNetwork.h",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.h",
               "RelativeDocumentMoniker": "scr\\NeuralNetwork.h",
               "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.h",
               "RelativeToolTip": "scr\\NeuralNetwork.h",
-              "ViewState": "AgIAADQAAAAAAAAAAAAgwEQAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwAkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-23T12:02:24.974Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "NeuralNetwork.cpp",
               "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.cpp",
               "RelativeDocumentMoniker": "scr\\NeuralNetwork.cpp",
               "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\NeuralNetwork.cpp",
               "RelativeToolTip": "scr\\NeuralNetwork.cpp",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAowCwAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAANgAAAAAAAAAAAAowOcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-23T12:02:09.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Run.h",
+              "DocumentMoniker": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\Run.h",
+              "RelativeDocumentMoniker": "scr\\Run.h",
+              "ToolTip": "C:\\Users\\lozho\\OneDrive\\Desktop\\cpp\\nnet\\NeuralNetwork\\scr\\Run.h",
+              "RelativeToolTip": "scr\\Run.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-24T10:10:13.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "vector",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
+              "ViewState": "AgIAAFMHAAAAAAAAAAAtwF8HAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-24T10:06:41.722Z",
               "EditorCaption": ""
             }
           ]
         }
       ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "b069a1f1-9ec8-47dd-b2f4-4b42356cec6e",
+        "Display": 1,
+        "X": 124,
+        "Y": 86,
+        "Width": 1582,
+        "Height": 925,
+        "WindowState": 2
+      },
+      "DocumentGroups": []
     }
   ]
 }

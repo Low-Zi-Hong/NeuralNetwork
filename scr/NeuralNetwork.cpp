@@ -155,6 +155,7 @@ int NNET::Feed_Propagation(nnet& _nnet)
 {
 	for (int _layer = 1; _layer < _nnet.Layer.size();_layer++)
 	{
+#pragma omp parallel for
 		for (int _e = 0; _e < _nnet.Layer[_layer].size(); _e++)
 		{
 			_nnet.Layer[_layer][_e] = _nnet.Bias[_layer][_e];
@@ -183,6 +184,7 @@ float NNET::Calculate_Error(nnet& _nnet, std::vector<float>& result)
 {
 	float total_cost = 0;
 	if (_nnet.Layer[_nnet.Layer.size() - 1].size() != result.size()) std::abort;
+#pragma omp parallel for
 	for (int i = 0; i < _nnet.Error.size(); i++)
 	{
 		float diff = (result[i] - _nnet.Layer[_nnet.Layer.size() - 1][i]);
@@ -227,6 +229,7 @@ float NNET::Back_Propagation(nnet& _nnet, std::vector<float>& result)
 	_nnet.Delta.resize(_nnet.Layer.size());
 	_nnet.Delta[_nnet.Delta.size()-1].resize(result.size());
 	vector<float>& delta_l = _nnet.Delta[_nnet.Delta.size() - 1];
+#pragma omp parallel for
 	for (int i = 0; i < delta_l.size(); i++)
 	{
 		delta_l[i] = (_nnet.Last_Layer()[i] - result[i]) * (_nnet.Last_Layer()[i] * (1 - _nnet.Last_Layer()[i]));
@@ -236,6 +239,7 @@ float NNET::Back_Propagation(nnet& _nnet, std::vector<float>& result)
 	for (int l = _nnet.Layer.size() - 1; l > 0; l--)
 	{
 		//accumulate weight n bias
+#pragma omp parallel for
 		for (int i = 0; i < delta_l.size(); i++)
 		{
 			for (int o = 0; o < _nnet.Layer[l-1].size(); o++)
@@ -250,7 +254,7 @@ float NNET::Back_Propagation(nnet& _nnet, std::vector<float>& result)
 			vector<float>& new_delta_l = _nnet.Delta[l - 1];
 			new_delta_l.resize(_nnet.Layer[l - 1].size());
 			std::fill(new_delta_l.begin(), new_delta_l.end(), 0.0f);
-
+#pragma omp parallel for
 			for (int o = 0; o < _nnet.Weight[l - 1].size(); o++)
 			{
 				for (int i = 0; i < _nnet.Weight[l - 1][o].size(); i++)

@@ -46,6 +46,19 @@ namespace NNET
 		{
 			return Layer[Layer.size() - 1];
 		}
+
+		int MNISTResult()
+		{
+			int predicted_digit = 0;
+			float max_activation = Last_Layer()[0];
+			for (int i = 1; i < 10; i++) {
+				if (Last_Layer()[i] > max_activation) {
+					max_activation = Last_Layer()[i];
+					predicted_digit = i;
+				}
+			}
+			return predicted_digit;
+		}
 	};
 
 	/*

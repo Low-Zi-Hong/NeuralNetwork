@@ -13,7 +13,7 @@ namespace XOR {
         }
 	}
 
-    void generateAns(int& numBatches, std::vector< std::vector<std::vector<float>>>& b_dataans, std::vector< std::vector<std::vector<float>>>& b_dataset)
+    void generateAns(int& batchSize,int& numBatches, std::vector< std::vector<std::vector<float>>>& b_dataans, std::vector< std::vector<std::vector<float>>>& b_dataset)
     {
         for (int b = 0; b < numBatches; b++) {
             // 2. Resize each batch to hold the correct number of answers

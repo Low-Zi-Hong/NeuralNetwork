@@ -197,5 +197,11 @@
     <ClInclude Include="scr\UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="scr\XOR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Run.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

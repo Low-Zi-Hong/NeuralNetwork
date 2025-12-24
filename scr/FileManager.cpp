@@ -113,9 +113,106 @@ int FMANAGER::SaveFile(const NNET::nnet& _nnet, string& file_path)
 	return 0;
 }
 
+int MNIST::ReverseInt(int i) {
+	unsigned char ch1, ch2, ch3, ch4;
+	ch1 = i & 255;
+	ch2 = (i >> 8) & 255;
+	ch3 = (i >> 16) & 255;
+	ch4 = (i >> 24) & 255;
+	return ((int)ch1 << 24) + ((int)ch2 << 16) + ((int)ch3 << 8) + ch4;
+}
+
+void MNIST::LoadImages(std::string filename, std::vector<std::vector<float>>& dataset) {
+	std::ifstream file(filename, std::ios::binary);
+	if (file.is_open()) {
+		std::cout << "[SYSTEM] Loading MNIST Images..." << std::endl;
+		int magic_number = 0, num_images = 0, rows = 0, cols = 0;
+		file.read((char*)&magic_number, 4);
+		file.read((char*)&num_images, 4);
+		file.read((char*)&rows, 4);
+		file.read((char*)&cols, 4);
+
+		num_images = ReverseInt(num_images);
+		rows = ReverseInt(rows);
+		cols = ReverseInt(cols);
+
+		dataset.resize(num_images, std::vector<float>(rows * cols));
+
+		for (int i = 0; i < num_images; i++) {
+			for (int p = 0; p < rows * cols; p++) {
+				unsigned char pixel = 0;
+				file.read((char*)&pixel, 1);
+				// NORMALIZATION: 0-255 becomes 0.0-1.0
+				dataset[i][p] = (float)pixel / 255.0f;
+			}
+
+			// --- PROGRESS BAR LOGIC ---
+			if (i % 1000 == 0 || i == num_images - 1) {
+				float progress = (float)(i + 1) / num_images * 100;
+				int barWidth = 30;
+
+				std::cout << "\r[";
+				int pos = barWidth * (progress / 100.0);
+				for (int b = 0; b < barWidth; ++b) {
+					if (b < pos) std::cout << "=";
+					else if (b == pos) std::cout << ">";
+					else std::cout << " ";
+				}
+				std::cout << "] " << (int)progress << "% (" << i + 1 << "/" << num_images << ")" << std::flush;
+			}
+		}
+		std::cout << std::endl; // Break line when finished
+		
+	}
+}
 
 
+void MNIST::LoadLabels(std::string filename, std::vector<std::vector<float>>& labels) {
+	std::ifstream file(filename, std::ios::binary);
+	if (file.is_open()) {
+		std::cout << "[SYSTEM] Loading MNIST Labels..." << std::endl;
+		int magic_number = 0, num_items = 0;
+		file.read((char*)&magic_number, 4);
+		file.read((char*)&num_items, 4);
 
+		num_items = MNIST::ReverseInt(num_items);
+
+		// 1. Resize the container: 60,000 samples, each having 10 output neurons
+		labels.resize(num_items, std::vector<float>(10, 0.0f));
+
+		for (int i = 0; i < num_items; i++) {
+			unsigned char label = 0;
+			file.read((char*)&label, 1);
+
+			// 2. ONE-HOT ENCODING
+			// If the label is '3', set the 3rd index to 1.0. 
+			// Everything else remains 0.0.
+			if (label < 10) {
+				labels[i][label] = 1.0f;
+			}
+
+			// --- PROGRESS BAR LOGIC ---
+			if (i % 1000 == 0 || i == num_items - 1) {
+				float progress = (float)(i + 1) / num_items * 100;
+				int barWidth = 30;
+
+				std::cout << "\r[";
+				int pos = barWidth * (progress / 100.0);
+				for (int b = 0; b < barWidth; ++b) {
+					if (b < pos) std::cout << "=";
+					else if (b == pos) std::cout << ">";
+					else std::cout << " ";
+				}
+				std::cout << "] " << (int)progress << "% (" << i + 1 << "/" << num_items << ")" << std::flush;
+			}
+
+		}
+		std::cout << std::endl<< "[SYSTEM] Successfully loaded " << num_items << " labels." << std::endl;
+	}
+	else {
+		std::cout << "[ERROR] Could not open label file!" << std::endl;
+	}
+}
 
 
 
