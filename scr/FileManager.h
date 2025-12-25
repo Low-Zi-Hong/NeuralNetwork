@@ -34,5 +34,8 @@ namespace MNIST
 	void LoadImages(std::string filename, std::vector<std::vector<float>>& dataset);
 
 	void LoadLabels(std::string filename, std::vector<std::vector<float>>& labels);
+
+	void ProcessImgLabel(std::vector<std::vector<float>>& dataset, std::vector<std::vector<float>>& dataans_raw, std::vector<std::vector<std::vector<float>>>& b_dataset, std::vector<std::vector<std::vector<float>>>& b_dataans, std::vector<std::vector<float>>& val_data, std::vector<std::vector<float>>& val_ans, int batchSize);
+
 }
 #endif

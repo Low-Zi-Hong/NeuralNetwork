@@ -215,7 +215,69 @@ void MNIST::LoadLabels(std::string filename, std::vector<std::vector<float>>& la
 }
 
 
+void MNIST::ProcessImgLabel(
+	std::vector < std::vector<float>>& dataset,	
+std::vector < std::vector<float>>& dataans_raw,
+	std::vector<std::vector<std::vector<float>>>& b_dataset, 
+	std::vector<std::vector<std::vector<float>>>& b_dataans, 
+	std::vector < std::vector<float>>& val_data, 
+	std::vector < std::vector<float>>& val_ans,
+	int batchSize
+)
+{
 
+
+	std::vector < std::vector<float>> train_data, train_ans;
+
+
+	int split_point = 50000;
+
+	train_data.reserve(split_point);
+	train_ans.reserve(split_point);
+
+	val_data.reserve(60000 - split_point);
+	val_ans.reserve(60000 - split_point);
+
+
+	for (int i = 0; i < 60000; i++)
+	{
+		if (i < split_point)
+		{
+			train_data.push_back(dataset[i]);
+			train_ans.push_back(dataans_raw[i]);
+		}
+		else
+		{
+			val_data.push_back(dataset[i]);
+			val_ans.push_back(dataans_raw[i]);
+		}
+	}
+
+	dataset.clear(); dataset.shrink_to_fit();
+	dataans_raw.clear(); dataans_raw.shrink_to_fit();
+
+	//split to mini batch
+	int numBatches = train_data.size() / batchSize;
+
+	b_dataset.resize(numBatches);
+	b_dataans.resize(numBatches);
+	for (int i = 0; i < train_data.size(); i++)
+	{
+		int batchIndex = i / batchSize;
+		int sampleIndex = i % batchSize;
+
+		if (batchIndex >= numBatches) break;
+
+		if (sampleIndex == 0) b_dataset[batchIndex].resize(batchSize);
+		if (sampleIndex == 0) b_dataans[batchIndex].resize(batchSize);
+
+		b_dataset[batchIndex][sampleIndex] = train_data[i];
+		b_dataans[batchIndex][sampleIndex] = train_ans[i];
+	}
+
+	train_data.clear(); train_data.shrink_to_fit();
+	train_ans.clear(); train_ans.shrink_to_fit();
+}
 
 
 

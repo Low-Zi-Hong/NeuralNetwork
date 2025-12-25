@@ -1,9 +1,7 @@
-﻿  main.cpp
-C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(61,51): warning C4551: function call missing argument list
-C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(224,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\main.cpp(300,55): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-  NeuralNetwork.cpp
-C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\NeuralNetwork.cpp(187,72): warning C4551: function call missing argument list
-C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\NeuralNetwork.cpp(240,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\NeuralNetwork.cpp(251,3): error C2143: syntax error: missing ';' before 'std::endl'
-C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\scr\NeuralNetwork.cpp(251,3): warning C4551: function call missing argument list
+﻿  pygateway.cpp
+  Generating code
+  45 of 554 functions ( 8.1%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    14 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  NeuralNetwork.vcxproj -> C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\Release\NeuralNetwork.exe

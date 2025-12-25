@@ -24,7 +24,8 @@ using namespace std;
 
 
 int approach = 10;
-int batchSize = 10;
+int batchSize = 30;
+float learning_rate = 0.1f;
 
 
 int main()
@@ -53,7 +54,7 @@ int main()
         FMANAGER::LoadFile(NeuralNetwork,filename);
         Print_Weights_Sample(NeuralNetwork, 1);
     }
-    if (choice == 3)
+    else if (choice == 3)
     {
         FMANAGER::LoadFile(NeuralNetwork, filename);
         Print_Weights_Sample(NeuralNetwork, 1);
@@ -191,57 +192,14 @@ int main()
     MNIST::LoadImages("train-images.idx3-ubyte", dataset);
     MNIST::LoadLabels("train-labels.idx1-ubyte", dataans_raw);
 
-    std::vector < std::vector<float>> train_data, train_ans;
-    std::vector < std::vector<float>> val_data, val_ans;
 
-    int split_point = 50000;
-
-    train_data.reserve(split_point);
-    train_ans.reserve(split_point);
-
-    val_data.reserve(60000 - split_point);
-    val_ans.reserve(60000 - split_point);
-
-
-    for (int i = 0; i < 60000; i++)
-    {
-        if (i < split_point)
-        {
-            train_data.push_back(dataset[i]);
-            train_ans.push_back(dataans_raw[i]);
-        }
-        else
-        {
-            val_data.push_back(dataset[i]);
-            val_ans.push_back(dataans_raw[i]);
-        }
-    }
-
-    dataset.clear(); dataset.shrink_to_fit();
-    dataans_raw.clear(); dataans_raw.shrink_to_fit();
-
-    //split to mini batch
-    int numBatches = train_data.size() / batchSize;
     std::vector<std::vector<std::vector<float>>> b_dataset;
     std::vector<std::vector<std::vector<float>>> b_dataans;
-    b_dataset.resize(numBatches);
-    b_dataans.resize(numBatches);
-    for (int i = 0; i < train_data.size(); i++)
-    {
-        int batchIndex = i / batchSize;
-        int sampleIndex = i % batchSize;
 
-        if (batchIndex >= numBatches) break;
+    std::vector < std::vector<float>> val_data, val_ans;
 
-        if (sampleIndex == 0) b_dataset[batchIndex].resize(batchSize);
-        if (sampleIndex == 0) b_dataans[batchIndex].resize(batchSize);
 
-        b_dataset[batchIndex][sampleIndex] = train_data[i];
-        b_dataans[batchIndex][sampleIndex] = train_ans[i];
-    }
-
-    train_data.clear(); train_data.shrink_to_fit();
-    train_ans.clear(); train_ans.shrink_to_fit();
+    MNIST::ProcessImgLabel(dataset, dataans_raw, b_dataset, b_dataans, val_data, val_ans, batchSize);
 
 
     NNET::Init_Gradient_Accumulation(NeuralNetwork);
@@ -293,7 +251,7 @@ int main()
                 //accumulate gradient done
             }
 
-            float learning_rate = 0.01f;
+
             NNET::Update_Model(NeuralNetwork, learning_rate, batchSize);
 
             // 5. Live Dashboard Call
