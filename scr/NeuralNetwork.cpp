@@ -2,11 +2,16 @@
 #include <vector>
 #include <random>
 #include <omp.h>
+#include <algorithm>
+#include <thread>
 
 
 #include "NeuralNetwork.h"
 #include "EMath.h"
 #include "Run.h"
+
+#define ReLu //use ReLu else comment it out
+
 
 using namespace std;
 
@@ -114,26 +119,31 @@ void NNET::nnet::reinit(vector<int> _structure)
  */
 int NNET::Random_Initialise(nnet& _nnet)
 {
-	std::default_random_engine gen;
-	std::normal_distribution<float> normal_distribution(0.0, 1.0);
 
 #pragma omp parallel for
-	for (auto& l : _nnet.Bias)
+	for ( int i = 0; i < _nnet.Bias.size(); i++)
 	{
-		for (auto& b : l)
+		std::hash<std::thread::id> hasher;
+		std::default_random_engine gen(clock() + hasher(std::this_thread::get_id()));
+		std::normal_distribution<float> normal_distribution(0.0, 1.0);
+		for (int o = 0; o < _nnet.Bias[i].size(); o++)
 		{
-			b = normal_distribution(gen);
+			_nnet.Bias[i][o] = normal_distribution(gen);
 		}
 	}
 
 #pragma omp parallel for
-	for (auto& l : _nnet.Weight)
+	for (int i = 0; i < _nnet.Weight.size(); i++)
 	{
-		for (auto& r : l)
+		std::hash<std::thread::id> hasher;
+		std::default_random_engine gen(clock() + hasher(std::this_thread::get_id()));
+		std::normal_distribution<float> normal_distribution(0.0, 1.0);
+		for (int o = 0; o < _nnet.Weight[i].size(); o++)
 		{
-			for (auto& e : r)
+			for (int p = 0; p < _nnet.Weight[i][o].size(); p++)
+			
 			{
-				e = normal_distribution(gen);
+				_nnet.Weight[i][o][p] = normal_distribution(gen);
 			}
 		}
 	}
@@ -164,7 +174,12 @@ int NNET::Feed_Propagation(nnet& _nnet)
 			{
 				_nnet.Layer[_layer][_e] += _nnet.Weight[_layer - 1][_pl][_e] * _nnet.Layer[_layer - 1][_pl];
 			}
+#ifdef ReLu
+			if(_layer < _nnet.Layer.size() -1) _nnet.Layer[_layer][_e] = _nnet.Layer[_layer][_e] > 0.0f ? _nnet.Layer[_layer][_e] : 0.0f;
+			else _nnet.Layer[_layer][_e] = 1.0f / (1.0f + expf(-_nnet.Layer[_layer][_e]));
+#else
 			_nnet.Layer[_layer][_e] = 1.0f / (1.0f + expf(-_nnet.Layer[_layer][_e]));
+#endif
 		}
 
 	}
@@ -185,7 +200,7 @@ float NNET::Calculate_Error(nnet& _nnet, std::vector<float>& result)
 {
 	float total_cost = 0;
 	if (_nnet.Layer[_nnet.Layer.size() - 1].size() != result.size()) std::abort;
-#pragma omp parallel for
+#pragma omp parallel for reduction(+:total_cost)
 	for (int i = 0; i < _nnet.Error.size(); i++)
 	{
 		float diff = (result[i] - _nnet.Layer[_nnet.Layer.size() - 1][i]);
@@ -281,9 +296,14 @@ float NNET::Back_Propagation(nnet& _nnet, std::vector<float>& result)
 					new_delta_l[o] += _nnet.Weight[l - 1][o][i] * delta_l[i];
 				}
 				
+#ifdef ReLu
+				if (l < _nnet.Layer.size() - 1) new_delta_l[o] *= (_nnet.Layer[l - 1][o] > 0.0f) ? 1.0f : 0.0f;
+				else new_delta_l[o] *= _nnet.Layer[l - 1][o] * (1.0f - _nnet.Layer[l - 1][o]);
+#else
 				new_delta_l[o] *= _nnet.Layer[l - 1][o] * (1.0f - _nnet.Layer[l - 1][o]);
+#endif
 			}
-			delta_l = new_delta_l;
+			std::swap(delta_l, new_delta_l);
 		}
 
 	}

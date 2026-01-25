@@ -11,6 +11,7 @@ using namespace std;
 #include "scr/XOR.h"
 #include "scr/Run.h"
 
+
 #define nnet_structure {784,256,128,64,10} //{input, [hidden layer], output}
 
 
@@ -56,6 +57,7 @@ int main()
     }
     else if (choice == 3)
     {
+#ifdef XOR_Version
         FMANAGER::LoadFile(NeuralNetwork, filename);
         Print_Weights_Sample(NeuralNetwork, 1);
 
@@ -66,28 +68,81 @@ int main()
         {
             std::vector<float> inp;
 
-#ifdef XOR_Version
+
             float a, b;
             std::cout << "Enter Input A (0 or 1): "; std::cin >> a;
             if (a == -1) { ui_active = false; std::abort; break; }
             std::cout << "Enter Input B (0 or 1): "; std::cin >> b;
             inp = { a, b };
-#else
-            int image_index;
-            std::cout << "Enter MNIST Image Index (0-9999): "; std::cin >> image_index;
-            //user_input = MNIST::GetImage(image_index);
-#endif
 
-            NeuralNetwork.input(inp);
-            NNET::Feed_Propagation(NeuralNetwork);
-
-#ifdef XOR_Version
             std::cout << "Prediction: " << NeuralNetwork.Last_Layer()[0] << std::endl;
+    }
 #else
             //int prediction = NNET::Get_Highest_Output(NeuralNetwork);
             //std::cout << "The Brain thinks this digit is: " << prediction << std::endl;
-#endif
+        // 1. Load the trained model
+        FMANAGER::LoadFile(NeuralNetwork, filename);
+        Print_Weights_Sample(NeuralNetwork, 1);
+
+        if (NeuralNetwork.structure.empty()) {
+            std::cerr << "Error: Model structure is empty. Load failed." << std::endl;
+            std::abort();
         }
+
+        // 2. Load the MNIST Test Dataset into memory once
+        std::vector<std::vector<float>> test_images;
+        std::vector<std::vector<float>> test_labels;
+
+        std::cout << "Loading MNIST Test Data..." << std::endl;
+        // Assuming these are your binary test files
+        MNIST::LoadImages("train-images.idx3-ubyte", test_images);
+        MNIST::LoadLabels("train-labels.idx1-ubyte", test_labels);
+
+        bool ui_active = true;
+        while (ui_active)
+        {
+            int image_index;
+            std::cout << "\n------------------------------------------" << std::endl;
+            std::cout << "Enter MNIST Image Index (0-9999) or -1 to exit: ";
+            std::cin >> image_index;
+
+            if (image_index == -1) {
+                ui_active = false;
+                std::abort;
+                break;
+            }
+
+            if (image_index < 0 || image_index >= test_images.size()) {
+                std::cout << "Invalid Index! Please try again." << std::endl;
+                continue;
+            }
+
+            // 3. Extract the image vector and feed it to the model
+            std::vector<float> inp = test_images[image_index];
+            NeuralNetwork.input(inp);
+
+            // 4. Run Inference (Forward Pass)
+            PROFILE_MS("feed",
+                NNET::Feed_Propagation(NeuralNetwork);
+            );
+            // 5. Interpret the Results
+            int prediction = NeuralNetwork.MNISTResult(); // Your C++ index-max function
+
+            // Find the actual label for comparison
+            int actual_label = 0;
+            for (int i = 0; i < 10; i++) if (test_labels[image_index][i] > 0.5f) actual_label = i;
+
+            std::cout << "The Brain thinks this digit is: " << prediction << std::endl;
+            std::cout << "The Actual Label is: " << actual_label << std::endl;
+
+            if (prediction == actual_label)
+                std::cout << "RESULT: CORRECT! [V]" << std::endl;
+            else
+                std::cout << "RESULT: WRONG! [X]" << std::endl;
+        }
+
+#endif
+        
 
     }
     else

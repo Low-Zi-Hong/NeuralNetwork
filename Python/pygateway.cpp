@@ -1,4 +1,4 @@
-#define PythonLib
+//#define PythonLib
 
 #ifdef PythonLib
 
@@ -14,6 +14,12 @@ namespace py = pybind11;
 
 int add(int i, int j) { return i + j; }
 
+/**
+ * LZH Neural Engine - High Performance C++ Backend
+ * -----------------------------------------------
+ * This module implements the pybind11 bridge, exposing native C++ neural
+ * kernels to the Python interpreter for rapid prototyping and telemetry.
+ */
 PYBIND11_MODULE(NnetLZH, m) {
 	m.doc() = "pybind11 plugin";
 
