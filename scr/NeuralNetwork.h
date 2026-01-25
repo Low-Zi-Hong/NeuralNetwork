@@ -81,6 +81,8 @@ namespace NNET
 
 	void Clear_Layer(NNET::nnet& _nnet);
 
+	void Updatelr(float& accuracy, float& lr,float& o_lr);
+
 
 }
 

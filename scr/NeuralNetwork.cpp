@@ -123,13 +123,7 @@ int NNET::Random_Initialise(nnet& _nnet)
 #pragma omp parallel for
 	for ( int i = 0; i < _nnet.Bias.size(); i++)
 	{
-		std::hash<std::thread::id> hasher;
-		std::default_random_engine gen(clock() + hasher(std::this_thread::get_id()));
-		std::normal_distribution<float> normal_distribution(0.0, 1.0);
-		for (int o = 0; o < _nnet.Bias[i].size(); o++)
-		{
-			_nnet.Bias[i][o] = normal_distribution(gen);
-		}
+		std::fill(_nnet.Bias[i].begin(), _nnet.Bias[i].end(), 0.0f);
 	}
 
 #pragma omp parallel for
@@ -137,7 +131,9 @@ int NNET::Random_Initialise(nnet& _nnet)
 	{
 		std::hash<std::thread::id> hasher;
 		std::default_random_engine gen(clock() + hasher(std::this_thread::get_id()));
-		std::normal_distribution<float> normal_distribution(0.0, 1.0);
+		float fan_in = (float)_nnet.Weight[i].size();
+		float std_dev = sqrt(2.0f / fan_in);
+		std::normal_distribution<float> normal_distribution(0.0, std_dev);
 		for (int o = 0; o < _nnet.Weight[i].size(); o++)
 		{
 			for (int p = 0; p < _nnet.Weight[i][o].size(); p++)
@@ -297,8 +293,7 @@ float NNET::Back_Propagation(nnet& _nnet, std::vector<float>& result)
 				}
 				
 #ifdef ReLu
-				if (l < _nnet.Layer.size() - 1) new_delta_l[o] *= (_nnet.Layer[l - 1][o] > 0.0f) ? 1.0f : 0.0f;
-				else new_delta_l[o] *= _nnet.Layer[l - 1][o] * (1.0f - _nnet.Layer[l - 1][o]);
+				new_delta_l[o] *= (_nnet.Layer[l - 1][o] > 0.0f) ? 1.0f : 0.0f;
 #else
 				new_delta_l[o] *= _nnet.Layer[l - 1][o] * (1.0f - _nnet.Layer[l - 1][o]);
 #endif
@@ -346,4 +341,11 @@ float NNET::Update_Model(NNET::nnet& _nnet, float& learning_rate, int& batch_siz
 void NNET::Clear_Layer(NNET::nnet& _nnet)
 {
 	ZeroOut(_nnet.Layer);
+}
+
+void NNET::Updatelr(float& accuracy, float& lr, float& o_lr) {
+	if (accuracy > 90) lr = o_lr / 10;
+	if (accuracy > 95) lr = o_lr / 10;
+	if (accuracy > 98) lr = o_lr / 10;
+	if (accuracy > 99) lr = o_lr / 10;
 }

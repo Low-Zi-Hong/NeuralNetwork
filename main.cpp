@@ -24,9 +24,9 @@ using namespace std;
 #endif
 
 
-int approach = 10;
+int approach = 20;
 int batchSize = 30;
-float learning_rate = 0.1f;
+float learning_rate = 1.0f;
 
 
 int main()
@@ -256,7 +256,7 @@ int main()
 
     MNIST::ProcessImgLabel(dataset, dataans_raw, b_dataset, b_dataans, val_data, val_ans, batchSize);
 
-
+    float lr = learning_rate;
     NNET::Init_Gradient_Accumulation(NeuralNetwork);
     for (int ap = 0; ap < approach; ap++)
     {
@@ -307,12 +307,15 @@ int main()
             }
 
 
-            NNET::Update_Model(NeuralNetwork, learning_rate, batchSize);
+
+            NNET::Update_Model(NeuralNetwork, lr, batchSize);
 
             // 5. Live Dashboard Call
             float avg_cost = batch_total_cost / batchSize;
             float accuracy = (float)correct_hits / batchSize;
             Display_Progress(ap, batch, b_dataset.size(), avg_cost, accuracy);
+            
+            NNET::Updatelr(accuracy,lr, learning_rate);
         }
 
         int val_correct = 0;
@@ -359,7 +362,8 @@ int main()
         std::cout << ">> [EPOCH " << ap << "] Validation Accuracy: " << (final_val_acc * 100.0f) << "%" << std::endl;
         std::cout << ">> [EPOCH " << ap << "] Validation Loss: " << final_val_loss << std::endl;
 
-
+        std::cout << "\n[SYSTEM] Epoch " << ap << " Complete. Model Saved." << std::endl;
+        FMANAGER::SaveFile(NeuralNetwork, filename);
     }
 
 

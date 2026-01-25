@@ -1,8 +1,10 @@
 ﻿  pygateway.cpp
-     Creating library C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\PythonLib\NnetLZH.lib and object C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\PythonLib\NnetLZH.exp
+  main.cpp
+C:\Users\lozho\Desktop\cpp\nnet\NeuralNetwork\main.cpp(111,22): warning C4551: function call missing argument list
+C:\Users\lozho\Desktop\cpp\nnet\NeuralNetwork\main.cpp(316,55): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+     Creating library C:\Users\lozho\Desktop\cpp\nnet\NeuralNetwork\x64\PythonLib\NnetLZH.lib and object C:\Users\lozho\Desktop\cpp\nnet\NeuralNetwork\x64\PythonLib\NnetLZH.exp
   Generating code
-  169 of 3912 functions ( 4.3%) were compiled, the rest were copied from previous compilation.
-    99 functions were new in current compilation
-    412 functions had inline decision re-evaluated but remain unchanged
+  Compiler switch has changed, fall back to full compilation.
+  All 3933 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
-  NeuralNetwork.vcxproj -> C:\Users\lozho\OneDrive\Desktop\cpp\nnet\NeuralNetwork\x64\PythonLib\NnetLZH.pyd
+  NeuralNetwork.vcxproj -> C:\Users\lozho\Desktop\cpp\nnet\NeuralNetwork\x64\PythonLib\NnetLZH.pyd
