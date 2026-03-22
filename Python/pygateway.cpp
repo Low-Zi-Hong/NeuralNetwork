@@ -1,4 +1,4 @@
-//#define PythonLib
+#define PythonLib
 
 #ifdef PythonLib
 
@@ -49,6 +49,9 @@ PYBIND11_MODULE(NnetLZH, m) {
 	m.def("LoadLabel", &MNIST::LoadLabels, "Load MNIST label");
 	m.def("ProcessData", &MNIST::ProcessImgLabel, "Process MNIST Images and Labels");
 
+	m.def("BackPropagation", &NNET::Back_Propagation, "Back Propagate gradients");
+	m.def("UpdateModel", &NNET::Update_Model, "Update weights and biases");
+	m.def("InitGradient", &NNET::Init_Gradient_Accumulation, "Initialize gradient vectors");
 }
 
 

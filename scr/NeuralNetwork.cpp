@@ -300,7 +300,6 @@ float NNET::Back_Propagation(nnet& _nnet, std::vector<float>& result)
 			}
 			std::swap(delta_l, new_delta_l);
 		}
-
 	}
 	return 0;
 }

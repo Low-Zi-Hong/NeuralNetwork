@@ -200,7 +200,7 @@
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
       <AdditionalIncludeDirectories>$(SolutionDir)Python\include;C:\Users\lozho\AppData\Local\Programs\Python\Python314\Include;$(SolutionDir)scr</AdditionalIncludeDirectories>
-      <OpenMPSupport>true</OpenMPSupport>
+      <OpenMPSupport>false</OpenMPSupport>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

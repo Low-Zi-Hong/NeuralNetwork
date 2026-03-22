@@ -11,6 +11,8 @@ using namespace std;
 #include "scr/XOR.h"
 #include "scr/Run.h"
 
+#define Analyse_Mode //command out if max effi
+
 
 #define nnet_structure {784,256,128,64,10} //{input, [hidden layer], output}
 
@@ -147,6 +149,20 @@ int main()
     }
     else
     {
+        std::cout << "Please Define Your Model's Structure" << std::endl;
+        std::cout << "Total Layer of your Model enter -1 if use default: ";
+        int total_layer;
+        std::cin >> total_layer;
+        if (total_layer > 0) {
+            std::vector<int> user_structure;
+            for (int i = 0; i < total_layer; i++)
+            {
+                int input;
+                std::cin >> input;
+                user_structure.push_back(input);
+            }
+            NeuralNetwork.reinit(user_structure);
+        }
         std::cout << "[SYSTEM] Initializing new model with random Gaussian weights..." << std::endl;
         NNET::Random_Initialise(NeuralNetwork);
         FMANAGER::NewFile(NeuralNetwork);
@@ -241,6 +257,11 @@ int main()
 
 #else
 
+    //for analyse purpose
+#ifdef Analyse_Mode 
+    string datafile = "data.txt";
+#endif
+
     std::vector < std::vector<float>> dataset;
     std::vector < std::vector<float>> dataans_raw;
 
@@ -314,6 +335,18 @@ int main()
             float avg_cost = batch_total_cost / batchSize;
             float accuracy = (float)correct_hits / batchSize;
             Display_Progress(ap, batch, b_dataset.size(), avg_cost, accuracy);
+
+
+            //save for analyse purpose
+#ifdef Analyse_Mode 
+            std::ofstream data(datafile);
+            if (data.is_open())
+            {
+                data << avg_cost <<" " << accuracy << endl;
+                data.close();
+            }
+#endif
+
             
             NNET::Updatelr(accuracy,lr, learning_rate);
         }
@@ -375,7 +408,7 @@ int main()
 
 #endif // XOR_Version
 
-
+    //wait I can like feed new data like the avg_cost, accuracy (series of history) to the model
 
 
 
