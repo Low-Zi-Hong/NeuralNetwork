@@ -26,3 +26,15 @@ jobs:
     - name: Build Solution
       run: |
         msbuild /m /p:Configuration=Release NeuralNetwork.sln
+
+    - name: Install Doxygen
+      run: sudo apt-get install -y doxygen
+    # 2. 运行 Doxygen 生成文档
+    - name: Run Doxygen
+      run: doxygen Doxyfile
+    # 3. 部署到 GitHub Pages (这是最骚的操作，文档直接变网页)
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./html  # Doxygen 默认生成的目录
