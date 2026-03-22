@@ -1,0 +1,32 @@
+name: MSVC-CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    # ⚠️ 关键：必须用 windows-latest，因为只有它装了 Visual Studio
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # 1. 寻找 MSBuild.exe (Visual Studio 的核心编译引擎)
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    # 2. 如果你有用到 NuGet 包（可选）
+    - name: Restore NuGet packages
+      run: nuget restore 你的项目名.sln
+
+    # 3. 核心步骤：编译代码
+    - name: Build Solution
+      run: |
+        msbuild /m /p:Configuration=Release 你的项目名.sln
+
+    # 4. 运行测试 (如果你写了微软原生的单元测试)
+    - name: Run Tests
+      run: vstest.console.exe "x64/Release/你的测试项目名.dll"
