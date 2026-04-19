@@ -38,9 +38,9 @@ inline vector<T> operator+(const vector<T>& a, const vector<T>& b)
 template <typename T>
 inline vector<T> operator-(const float& a, const vector<T>& b)
 {
-	std::vector<T> result(a.size());
-	if (a.size() != b.size()) std::abort;
-	for (size_t i = 0; i < a.size(); i++)
+	std::vector<T> result(b.size());
+	//if (a.size() != b.size()) std::abort;
+	for (size_t i = 0; i < b.size(); i++)
 	{
 		result[i] = a - b[i];
 	}
