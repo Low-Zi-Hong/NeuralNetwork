@@ -18,3 +18,19 @@ mnist_data/
 # --- Personal & OS Junk ---
 .DS_Store
 Thumbs.db
+
+html/
+latex/
+NeuralNetwork/
+Python/
+x64/
+data.txt
+Dockerfile
+documentation.docx
+DoxyFile
+*.nnet
+*.vcxproj
+*.filters
+*.user
+train-images.idx3-ubyte
+train-labels.idx1-ubyte
